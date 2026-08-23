@@ -1,0 +1,211 @@
+/* style.css - Central stylesheet for Jess Case Portfolio
+*/
+/* Global Reset & Base Setup */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+      display: flex;
+    }
+
+    /* Fixed Left Sidebar */
+    .sidebar {
+      width: 220px;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #2b2b2b;
+      border-right: 2px solid #3b82f6; /* Blue vertical accent line */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    .profile-img {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .sidebar-name {
+      color: #3b82f6;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .nav-links a {
+      color: #a0a0a0;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    /* Main Area Container (offset for fixed sidebar width) */
+    .main-content {
+      margin-left: 220px;
+      width: calc(100% - 220px);
+      min-height: 100vh;
+    }
+
+    /* Top Hero Header */
+    .hero {
+      height: 220px;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1200x400') center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .orange-divider {
+      height: 3px;
+      background-color: #f97316; /* Horizontal orange line */
+      width: 100%;
+    }
+
+    /* Content Sections */
+    .section {
+      padding: 3rem 2.5rem;
+      border-bottom: 1px solid #2a2a2a;
+      min-height: 60vh;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      color: #6ee7b7;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Project Cards Container */
+    .cards-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+	
+	/* Card base updates */
+	.card {
+	  background-color: #222222;
+	  border: 1px solid #333333;
+	  border-radius: 6px;
+	  padding: 1rem;
+	  display: flex;
+	  gap: 1.25rem;
+	  align-items: flex-start;
+  
+	  /* Smooth transition for hover effects */
+	  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	  cursor: pointer;
+	}
+
+	/* Card Hover State */
+	.card:hover {
+	  border-color: #f97316; /* Same orange as the hero divider line */
+	  box-shadow: 0 0 12px rgba(249, 115, 22, 0.25); /* Subtle orange outer glow */
+	}
+
+    .card img {
+      width: 180px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+	
+	/* Experience Card Style */
+	.card-experience {
+	  background-color: #222222;
+	  border: 1px solid #333333;
+	  border-radius: 6px;
+	  padding: 1.25rem 1.5rem;
+	  display: flex;
+	  flex-direction: column;
+	  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+	  cursor: pointer;
+	}
+
+	.card-experience:hover {
+	  border-color: #f97316;
+	  box-shadow: 0 0 12px rgba(249, 115, 22, 0.25);
+	}
+
+	.card-experience-header {
+	  display: flex;
+	  justify-content: space-between;
+	  align-items: baseline;
+	  flex-wrap: wrap;
+	  gap: 0.5rem;
+	  margin-bottom: 0.25rem;
+	}
+
+	.card-experience-title {
+	  font-size: 1.15rem;
+	  color: #ffffff;
+	  font-weight: bold;
+	}
+
+	.card-experience-date {
+	  font-size: 1.15rem;
+	  color: #ffffff;
+	  font-weight: bold;
+	}
+
+	.card-experience-subtitle {
+	  font-size: 0.95rem;
+	  color: #ffffff;
+	  font-weight: bold;
+	  margin-bottom: 0.8rem;
+	}
+
+	.card-experience-body {
+	  font-size: 0.85rem;
+	  color: #9ca3af;
+	  line-height: 1.4;
+	}
+
+    .card-content h3 {
+      font-size: 1.1rem;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      line-height: 1.4;
+    }
