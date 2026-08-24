@@ -12,11 +12,19 @@
     }
 
     body {
-      font-family: 'Courier New', Courier, monospace;
-      background-color: #1a1a1a;
+	  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;      background-color: #1a1a1a;
       color: #e0e0e0;
       display: flex;
     }
+	
+	/* Apply Source Code Pro to all titles and headers */
+	h1, h2, h3,
+	.sidebar-name,
+	.section-title,
+	.card-experience-title,
+	.card-experience-date {
+	  font-family: 'Source Code Pro', monospace;
+	}
 
     /* Fixed Left Sidebar */
     .sidebar {
