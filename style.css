@@ -99,11 +99,11 @@
     }
 
     /* Content Sections */
-    .section {
-      padding: 3rem 2.5rem;
-      border-bottom: 1px solid #2a2a2a;
-      min-height: 60vh;
-    }
+	.section {
+	  padding: 3rem 2.5rem;
+	  border-bottom: 1px solid #2a2a2a;
+	  height: auto; /* Scales automatically to fit whatever content is inside */
+	}
 
     .section-title {
       font-size: 1.4rem;
